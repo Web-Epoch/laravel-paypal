@@ -1,19 +1,19 @@
 {
-  "name": "srmklive/paypal",
+  "name": "saleemepoch/paypal",
   "type": "library",
-  "description": "Laravel plugin For Processing Payments Through Paypal Express Checkout. Can Be Used Independently With Other Applications.",
-  "keywords": ["http", "rest", "web service", "paypal", "laravel paypal"],
+  "description": "Laravel plugin for processing payments through Paypal Express with or without In-Context Checkout. Can be used independently other applications.",
+  "keywords": ["http", "rest", "web service", "paypal", "laravel paypal", "in context"],
   "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
     {
-      "name": "Raza Mehdi",
-      "email": "srmk@outlook.com"
+      "name": "Saleem Beg",
+      "email": "saleem@web-epoch.com"
     }
   ],
   "autoload":{
     "psr-4": {
-      "Srmklive\\PayPal\\": "src/"
+      "saleemepoch\\PayPal\\": "src/"
     }
   },
   "require": {
