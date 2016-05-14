@@ -1,7 +1,7 @@
 # Laravel PayPal
 
 # Fork
-This is a fork of saleemepoch/laravel-paypal. The plan is to make it more enhanced and agile.
+This is a fork of Srmklive/laravel-paypal. The plan is to make it more enhanced and agile.
 
 
 - [Introduction](#introduction)
