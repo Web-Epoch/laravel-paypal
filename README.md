@@ -91,7 +91,7 @@ return [
 		If using In-Context Checkout uncomment the following line. Otherwise,
 		leave it commented and it will use the default gateway: https://www.sandbox.paypal.com
 		*/
-		//'gateway_url' => 'https://www.paypal.com',
+		//'gateway_url' => 'https://www.paypal.com/checkoutnow/',
     ],
     'payment_action' => 'Sale', // Can Only Be 'Sale', 'Authorization', 'Order'
     'currency' => 'USD',
