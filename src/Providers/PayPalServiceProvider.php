@@ -1,4 +1,4 @@
-<?php namespace Srmklive\PayPal\Providers;
+<?php namespace saleemepoch\PayPal\Providers;
 
 /**
  * Class PayPalServiceProvider

@@ -1,4 +1,4 @@
-<?php namespace Srmklive\PayPal\Services;
+<?php namespace saleemepoch\PayPal\Services;
 
 use saleemepoch\PayPal\Traits\PayPalRequest As PayPalAPIRequest;
 

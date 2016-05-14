@@ -1,4 +1,4 @@
-<?php namespace Srmklive\PayPal\Facades;
+<?php namespace saleemepoch\PayPal\Facades;
 
 /**
  * Class Facade
