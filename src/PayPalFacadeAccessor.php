@@ -1,7 +1,7 @@
-<?php namespace Srmklive\PayPal;
+<?php namespace saleemepoch\PayPal;
 
-use Srmklive\PayPal\Services\AdaptivePayments;
-use Srmklive\PayPal\Services\ExpressCheckout;
+use saleemepoch\PayPal\Services\AdaptivePayments;
+use saleemepoch\PayPal\Services\ExpressCheckout;
 
 class PayPalFacadeAccessor
 {

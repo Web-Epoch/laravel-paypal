@@ -1,4 +1,4 @@
-<?php namespace Srmklive\PayPal\Traits;
+<?php namespace saleemepoch\PayPal\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
@@ -45,12 +45,16 @@ trait PayPalRequest
             $this->config['api_url'] = !empty($this->config['secret']) ?
                 'https://api-3t.sandbox.paypal.com/nvp' : 'https://api.sandbox.paypal.com/nvp';
 
-            $this->config['gateway_url'] = 'https://www.sandbox.paypal.com';
+            if (!isset($this->config['gateway_url']))
+                $this->config['gateway_url'] = 'https://www.sandbox.paypal.com';
+
         } else {
             $this->config['api_url'] = !empty($this->config['secret']) ?
                 'https://api-3t.paypal.com/nvp' : 'https://api.paypal.com/nvp';
 
-            $this->config['gateway_url'] = 'https://www.paypal.com';
+            if (!isset($this->config['gateway_url']))
+                $this->config['gateway_url'] = 'https://www.paypal.com';
+
         }
 
         // Adding params outside sandbox / live array

@@ -2,7 +2,7 @@
 
 /**
  * Class PayPalServiceProvider
- * @package Srmklive\PayPal
+ * @package saleemepoch\PayPal
  */
 
 use Illuminate\Support\ServiceProvider;

@@ -1,4 +1,4 @@
-<?php namespace Srmklive\PayPal\Traits;
+<?php namespace saleemepoch\PayPal\Traits;
 
 use Illuminate\Http\Request;
 

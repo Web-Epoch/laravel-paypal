@@ -2,8 +2,8 @@
 
 /**
  * Class Facade
- * @package Srmklive\PayPal\Facades
- * @see Srmklive\PayPal\ExpressCheckout
+ * @package saleemepoch\PayPal\Facades
+ * @see saleemepoch\PayPal\ExpressCheckout
  */
 
 use Illuminate\Support\Facades\Facade;
@@ -17,6 +17,6 @@ class PayPal extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Srmklive\PayPal\PayPalFacadeAccessor';
+        return 'saleemepoch\PayPal\PayPalFacadeAccessor';
     }
 }

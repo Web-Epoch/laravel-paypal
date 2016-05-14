@@ -1,5 +1,9 @@
 # Laravel PayPal
 
+# Fork
+This is a fork of saleemepoch/laravel-paypal. The plan is to make it more enhanced and agile.
+
+
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -23,7 +27,7 @@
 
 Laravel plugin For Processing Payments Through Paypal. Using this plugin you can process or refund payments and handle IPN (Instant Payment Notification) from PayPal in your Laravel application.
 
-**Currently only PayPal Express Checkout & Adaptive Payments API Is Supported.**
+**Currently only PayPal Express Checkout, Adaptive Payments API & In-Context Checkout Is Supported.**
 
 
 <a name="installation"></a>
@@ -32,25 +36,25 @@ Laravel plugin For Processing Payments Through Paypal. Using this plugin you can
 * Use following command to install:
 
 ```
-composer require srmklive/paypal
+composer require saleemepoch/paypal
 ```
 
 * Add the service provider to your $providers array in config/app.php file like: 
 
 ```
-'Srmklive\PayPal\Providers\PayPalServiceProvider' // Laravel 5
+'saleemepoch\PayPal\Providers\PayPalServiceProvider' // Laravel 5
 ```
 ```
-Srmklive\PayPal\Providers\PayPalServiceProvider::class // Laravel 5.1 or greater
+saleemepoch\PayPal\Providers\PayPalServiceProvider::class // Laravel 5.1 or greater
 ```
 
 * Add the alias to your $aliases array in config/app.php file like: 
 
 ```
-'PayPal' => 'Srmklive\PayPal\Facades\PayPal' // Laravel 5
+'PayPal' => 'saleemepoch\PayPal\Facades\PayPal' // Laravel 5
 ```
 ```
-'PayPal' => Srmklive\PayPal\Facades\PayPal::class // Laravel 5.1 or greater
+'PayPal' => saleemepoch\PayPal\Facades\PayPal::class // Laravel 5.1 or greater
 ```
 
 * Run the following command to publish configuration:
@@ -72,18 +76,33 @@ return [
         'password' => '',
         'secret' => '',
         'certificate' => '',
+        /*
+        If using In-Context Checkout uncomment the following line. Otherwise,
+        leave it commented and it will use the default gateway: https://www.sandbox.paypal.com
+        */
+        //'gateway_url' => 'https://www.sandbox.paypal.com/checkoutnow/',
     ],
     'live' => [
         'username' => '',
         'password' => '',
         'secret' => '',
         'certificate' => '',
+		/*
+		If using In-Context Checkout uncomment the following line. Otherwise,
+		leave it commented and it will use the default gateway: https://www.sandbox.paypal.com
+		*/
+		//'gateway_url' => 'https://www.paypal.com',
     ],
     'payment_action' => 'Sale', // Can Only Be 'Sale', 'Authorization', 'Order'
     'currency' => 'USD',
     'notify_url' => '', // Change this accordingly for your application.
 ];
 ```
+
+### In-Context Checkout
+Apart from changing the gateway (as mentioned above), remember to also include required JS without which In-Context wouldn't work.
+
+Clic here for more info: https://developer.paypal.com/docs/classic/express-checkout/in-context/integration/
 
 ## Usage
 
@@ -237,7 +256,7 @@ Suppose you have set IPN URL to **http://example.com/ipn/notify/** in PayPal. To
 
     ```
     // Put this above controller definition
-    use Srmklive\PayPal\Traits\IPNResponse As PayPalIPN;
+    use saleemepoch\PayPal\Traits\IPNResponse As PayPalIPN;
     
     // Then add the following before function declaration
     use PayPalIPN;
@@ -273,7 +292,7 @@ Suppose you have set IPN URL to **http://example.com/ipn/notify/** in PayPal. To
 ## Support
 
 This plugin only supports Laravel 5 or greater.
-* In case of any issues, kindly create one on the [Issues](https://github.com/srmklive/laravel-paypal/issues) section.
+* In case of any issues, kindly create one on the [Issues](https://github.com/saleemepoch/laravel-paypal/issues) section.
 * If you would like to contribute:
   * Fork this repository.
   * Implement your features.

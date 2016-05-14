@@ -1,6 +1,6 @@
 <?php namespace Srmklive\PayPal\Services;
 
-use Srmklive\PayPal\Traits\PayPalRequest As PayPalAPIRequest;
+use saleemepoch\PayPal\Traits\PayPalRequest As PayPalAPIRequest;
 
 class AdaptivePayments
 {
